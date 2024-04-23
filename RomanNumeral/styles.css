@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:  #1b1b32;
+  font-family: "Times New Roman", Times, serif;
+  color: #f5f6f7;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 20px 0;
+}
+
+.input-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #f4f5f6;
+  padding: 15px;
+}
+
+.convert-btn {
+  background-color: #f1be32;
+  cursor: pointer;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.result {
+  border: 2px solid #f4f5f6;
+  width: 200px;
+  margin: 5px 0;
+  padding: 15px;
+  text-align: center;
+  font-size: 2rem;
+}
