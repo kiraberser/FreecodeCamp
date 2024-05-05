@@ -1,12 +1,15 @@
+//Definimos un objeto en el cual tiene un valor y un argumento que pasa una callback function en la cual dependiento del operado rque le pasemos va ejeccutar una formula
 const infixToFunction = {
     "+": (x, y) => x + y,
     "-": (x, y) => x - y,
     "*": (x, y) => x * y,
     "/": (x, y) => x / y,
   }
-  
+// Empieza a ocupar el string y el regex en el cual llama el medotodo replace para cambiar como primer argumento pasa regex y el segundo con todos los parametros que se ocuparan y es una callback function en donde llama al infix y para el operator como 
   const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)));
   
+// aqui es una funcion en la cual declaran 2 variables una tiene como regex en donde filtraa la estructura del input que le demos y el segundo llama a la funcion de infix
+// en el segundo pasa primer parametro el str que del parametro y la variable regex 
   const highPrecedence = str => {
     const regex = /([\d.]+)([*\/])([\d.]+)/;
     const str2 = infixEval(str, regex);
